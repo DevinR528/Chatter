@@ -1,16 +1,22 @@
 {
-  "name": "chatter",
-  "version": "0.1.0",
-  "description": "messing with socket.io",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "devin.ragotzy",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2",
-    "socket.io": "^2.0.4"
-  }
+    "name": "chatter",
+    "version": "0.1.0",
+    "description": "Another stupid 'chat' app messing with socket.io",
+    "main": "server.js",
+    "keywords": [
+        "stupid", "chat", "socket.io", "app", "totally original", "whoa", "bro", "express", "practice"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server/server.js"
+    },
+    "engines": {
+        "node": "9.2.0"
+    },
+    "author": "devin.ragotzy",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.2",
+        "socket.io": "^2.0.4"
+    }
 }
