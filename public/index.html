@@ -8,8 +8,8 @@
     <meta name="description" content="ToDo">
     <meta name="author" content="Devin Ragotzy  @devin.ragotzy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/public/favicon.ico">
-    <link rel="stylesheet" href="/public/style.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -20,6 +20,14 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
+
+        socket.on('connect', () => {
+            console.log('connected to server');
+        });
+
+        socket.on('disconnect', () => {
+            console.log('disconnected from server');
+        });
     </script>
 </body>
 
