@@ -3,14 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/"><img alt="npm Downloads" src="https://img.shields.io/npm/dm/babel-core.svg?maxAge=43200"></a>
+  <a href="https://github.com/DevinR528"><img alt="icon" src="http://icons.iconarchive.com/icons/graphicloads/100-flat-2/64/msg-2-icon.png"></a>
   <a href="https://www.npmjs.com/package/"><img alt="cover" src="https://img.shields.io/sonar/4.2/http/sonar.petalslink.com/org.ow2.petals%3Apetals-se-ase/coverage.svg"></a>
 </p>
 
-![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg?style=plastic)
-
-#       Chatter
-#         On
+# keep it real with =>Chatter<= with real it keep
 
 ## Intro
 
