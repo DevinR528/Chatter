@@ -3,26 +3,26 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DevinR528"><img alt="icon" src="http://icons.iconarchive.com/icons/graphicloads/100-flat-2/64/msg-2-icon.png"></a>
+  <a href="https://blooming-forest-26976.herokuapp.com/"><img alt="Chatter" src="http://icons.iconarchive.com/icons/graphicloads/100-flat-2/64/msg-2-icon.png"></a>
   <a href="https://www.npmjs.com/package/"><img alt="cover" src="https://img.shields.io/sonar/4.2/http/sonar.petalslink.com/org.ow2.petals%3Apetals-se-ase/coverage.svg"></a>
 </p>
 
-# keep it real with =>Chatter<= with real it keep
+# !keep it real with [=>Chatter<=](https://blooming-forest-26976.herokuapp.com/) with real it keep!
 
 ## Intro
 
 Sleek design and thoes it Feature is what sets iCha... I mean Chatter apart from other chat applications out there.
 
-Don't settle for a practical chat experience when you could have shiney new Features.
+Don't settle for a practical chat experience when you could have shiny new Features.
 
 **In**
 
 ```js
 // api for adding new features recursivley
 var addNew = function(...feat) {
-    var shineyArray = [];
+    var shinyArray = [];
     feat.forEach(()=> {
-        shineyArray.push(feat);
+        shinyArray.push(feat);
     });
     addNew(moreCrap);
 }

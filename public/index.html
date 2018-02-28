@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Title</title>
+    <title>Chatter</title>
     <meta name="description" content="ToDo">
     <meta name="author" content="Devin Ragotzy  @devin.ragotzy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 
 <body>
@@ -16,6 +17,10 @@
     <form action="">
         <input id="m" autocomplete="off" /><button>Send</button>
     </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+    </script>
 </body>
 
 </html>
