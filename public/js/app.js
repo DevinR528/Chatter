@@ -5,6 +5,7 @@ socket.on('connect', function() {
 
     // client sends msg to server
     socket.emit('createMsg', JSON.stringify({
+        from: 'Devin',
         text: 'hello server'
     }));
 });
@@ -15,5 +16,5 @@ socket.on('disconnect', function() {
 
 socket.on('newMsg', function(msg) {
     var clientMsg = JSON.parse(msg);
-    console.log(`New Message from: ${clientMsg.from} -> ${clientMsg.text}`);
+    console.log(`New Message from: ${clientMsg.from} -> ${clientMsg.text} at ${clientMsg.timeStamp}`);
 });

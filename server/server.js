@@ -20,19 +20,18 @@ app.use(express.static(publicPath));
 io.on('connection', (socket) => {
     console.log('Server connected to client socket: ' + socket[0]);
 
-    // server sends msg to client
-    socket.emit('newMsg', JSON.stringify({
-        from: 'Austin',
-        text: 'Hey',
-        timeStamp: 123
-    }));
-
     /**
      * @event createMsg when client fires createMsg server socket listens for it
      */
     socket.on('createMsg', (msg) => {
         var parseMsg = JSON.parse(msg);
-        console.log(`Message from client ${parseMsg.text}`);
+        console.log(`New Message from ${parseMsg.from} -> ${parseMsg.text}`);
+        // io.emit emits to every connection socket only one
+        io.emit('newMsg', JSON.stringify({
+            from: 'Austin',
+            text: 'Hey',
+            timeStamp: new Date().getTime()
+        }));
     });
 
     /**
