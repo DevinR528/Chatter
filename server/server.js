@@ -32,11 +32,9 @@ io.on('connection', (socket) => {
      * @event createMsg when client fires createMsg server socket listens for it
      */
     socket.on('createMsg', (msg, callback) => {
-        // TODO parseMsg is not need yet change if able
-        var parseMsg = msg;
-        console.log(`New Message from ${parseMsg.from} -> ${parseMsg.text} at ${parseMsg.createdAt}`);
+        console.log(`New Message from ${msg.from} -> ${msg.text} at ${msg.createdAt}`);
         // server grabs message from single user and sends it out to all users io.__ is all listening
-        io.emit('newMsg', generateMessage(parseMsg.from, parseMsg.text));
+        io.emit('newMsg', generateMessage(msg.from, msg.text));
         // callback gets sent back to createMsg emitter any args in callback
         // are sent back as to the callback func in the emitter
         callback();
