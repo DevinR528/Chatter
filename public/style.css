@@ -1,74 +1,194 @@
+button,
+button:hover {
+    border: none;
+    color: #fff;
+    padding: 10px
+}
+
+.chat__messages,
+.chat__sidebar ul {
+    list-style-type: none
+}
+
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: .95rem
 }
 
-html {
-    height: 100%;
+li,
+ul {
+    list-style-position: inside
 }
 
-body {
-    align-self: center;
-    align-content: flex-start;
-    height: 800px;
-    width: 600px;
-    font: 900;
-    border: 5px 5px 9px #000040;
-    padding: 50px;
-    margin: 50px;
-    font-family: serif;
-    background: #148dcd;
-    color: #464646;
+h3 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem
 }
 
-div#app {
-    background: -moz-repeating-radial-gradient(#148dcd);
-    border: aqua, 1px, 3px, 3px;
-    width: 40%;
-    height: 75%;
+button {
+    background: #265f82;
+    cursor: pointer;
+    transition: background .3s ease
 }
 
-form {
-    font: 900;
-    background: #148dcd;
-    padding: 3px;
-    position: fixed;
-    bottom: 10%;
-    width: 75%;
+button:hover {
+    background: #1F4C69
 }
 
-form input {
-    border-radius: 7px;
-    border: 5px;
+button:disabled {
+    cursor: default;
+    background: #669bbd
+}
+
+.centered-form {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    background: -moz-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(49, 84, 129, 1)), color-stop(100%, rgba(39, 107, 130, 1)));
+    background: -webkit-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
+    background: -o-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
+    background: -ms-linear-gradient(125deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%);
+    background: linear-gradient(325deg, rgba(39, 107, 130, 1) 0, rgba(49, 84, 129, 1) 100%)
+}
+
+.centered-form__form {
+    background: #5a8a9a;
+    border: 5px solid #51cc7a;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin: 20px;
+    width: 230px
+}
+
+.form-field {
+    margin: 20px 0
+}
+
+.form-field>* {
+    width: 100%
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 7px
+}
+
+.form-field input,
+.form-field select {
+    border: 1px solid #5a8a9a;
+    padding: 10px
+}
+
+.chat {
+    display: flex
+}
+
+.chat__sidebar {
+    overflow-y: scroll;
+    width: 260px;
+    height: 100vh;
+    background: #344c80
+}
+
+.chat__footer,
+.chat__sidebar li {
+    background: #344c80;
+    padding: 10px
+}
+
+.chat__sidebar h3 {
+    color: #3ffa72;
+    margin: 10px 20px;
+    text-align: left
+}
+
+.chat__sidebar li {
+    border: 6px solid #3ffa72;
+    border-radius: 5px;
+    margin: 10px
+}
+
+.chat__main {
+    background: #172c5a;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%
+}
+
+.chat__messages {
+    background: #172c5a;
+    flex-grow: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px
+}
+
+.chat__footer {
+    display: flex;
+    flex-shrink: 0
+}
+
+.chat__footer form {
+    flex-grow: 1;
+    display: flex
+}
+
+.chat__footer form * {
+    margin-right: 10px
+}
+
+.chat__footer input {
+    border: none;
     padding: 10px;
-    width: 75%;
-    margin-right: .5%;
+    flex-grow: 1
 }
 
-form button {
-    width: 15%;
-    border: rgb(68, 67, 68);
-    border-style: outset;
-    border-radius: 7px;
-    padding: 10px;
+.message {
+    background: #348069;
+    border: 5px 8px 8px #999 padding: 10px
 }
 
-ol#msg-dis-box {
-    background: #148dcd;
-    border-radius: 7px;
-    size: 75%;
-    font: #060606;
-    list-style-type: none;
-    margin: 10px;
-    padding: 40px;
+.message__title {
+    display: flex;
+    margin-bottom: 5px
 }
 
-ol#msg-dis-box ol {
-    padding: 5px 10px;
+.message__title h4 {
+    font-weight: 600;
+    margin-right: 10px
 }
 
-ol:nth-child(odd) {
-    font: #0000a0;
-    background: rgb(187, 186, 186);
+.message__title span {
+    color: #999
+}
+
+.message__body p {
+    color: rgb(214, 224, 61)
+}
+
+@media (max-width:600px) {
+    * {
+        font-size: 1rem
+    }
+    .chat__sidebar {
+        display: none
+    }
+    .chat__footer {
+        flex-direction: column
+    }
+    .chat__footer form {
+        margin-bottom: 10px
+    }
+    .chat__footer button {
+        margin-right: 0
+    }
 }

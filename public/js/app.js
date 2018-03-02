@@ -13,10 +13,14 @@ socket.on('connect', function() {
 socket.on('newMsg', function(msg) {
     console.log(`From: ${msg.from} -> ${msg.text}`);
 
-    var li = jQuery('<li></li>');
-    li.text(`${msg.from} ->
-     "${msg.text}"`);
-    jQuery('#msg-dis-box').append(li);
+    var formatTime = moment(msg.createdAt).format('h:mm a');
+    var template = jQuery('#message-template').html();
+    var html = Mustache.render(template, {
+        text: msg.text,
+        from: msg.from,
+        createdAt: formatTime
+    });
+    jQuery('#messages').append(html);
 });
 
 // APP listen for disconnect event from anywhere
@@ -44,8 +48,9 @@ jQuery('#message-form').on('submit', function(event) {
     // also has access to the function via a callback arg server side
     socket.emit('createMsg', {
         from: 'User',
-        text: jQuery('[name=message]').val()
+        text: $('[name=message]').val()
     }, function() {
 
     });
+    $('[name=message]').val('Message');
 });
