@@ -60,8 +60,8 @@ button:disabled {
 }
 
 .centered-form__form {
-    background: #5a8a9a;
-    border: 5px solid #51cc7a;
+    background: #172c5a;
+    border: 5px solid #d655cb;
     border-radius: 5px;
     padding: 0 20px;
     margin: 20px;
@@ -95,12 +95,12 @@ button:disabled {
     overflow-y: scroll;
     width: 260px;
     height: 100vh;
-    background: #344c80
+    background: #0c1c3d;
 }
 
 .chat__footer,
 .chat__sidebar li {
-    background: #344c80;
+    background: #0c1c3d;
     padding: 10px
 }
 
@@ -153,8 +153,11 @@ button:disabled {
 }
 
 .message {
-    background: #348069;
-    border: 5px 8px 8px #999 padding: 10px
+    background: #172c5a;
+    border-bottom: 50%;
+    border-top: 50%;
+    border: 5px solid #170480;
+    padding: 10px;
 }
 
 .message__title {
