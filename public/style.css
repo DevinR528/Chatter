@@ -7,7 +7,7 @@ button:hover {
 
 .chat__messages,
 .chat__sidebar ul {
-    list-style-type: none
+    list-style-type: none;
 }
 
 * {
@@ -16,12 +16,12 @@ button:hover {
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
-    font-size: .95rem
+    font-size: .95rem;
 }
 
 li,
 ul {
-    list-style-position: inside
+    list-style-position: inside;
 }
 
 h3 {
@@ -107,11 +107,12 @@ button:disabled {
 .chat__sidebar h3 {
     color: #3ffa72;
     margin: 10px 20px;
-    text-align: left
+    text-align: center
 }
 
 .chat__sidebar li {
-    border: 6px solid #3ffa72;
+    color: #47e0d9;
+    border: 2px solid #db6291;
     border-radius: 5px;
     margin: 10px
 }
@@ -154,9 +155,12 @@ button:disabled {
 
 .message {
     background: #172c5a;
-    border-bottom: 50%;
-    border-top: 50%;
-    border: 5px solid #170480;
+    border-bottom: 1px;
+    border-top: 1px;
+    border-left: 3px;
+    border-right: 3px;
+    border-radius: 5px;
+    border: solid #369c51;
     padding: 10px;
 }
 
@@ -167,7 +171,7 @@ button:disabled {
 
 .message__title h4 {
     font-weight: 600;
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 .message__title span {
@@ -175,7 +179,7 @@ button:disabled {
 }
 
 .message__body p {
-    color: rgb(214, 224, 61)
+    color: rgb(236, 186, 47)
 }
 
 @media (max-width:600px) {
